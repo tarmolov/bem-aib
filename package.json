@@ -1,0 +1,15 @@
+{
+  "name": "bem-aib",
+  "version": "0.0.1",
+  "private": true,
+  "description": "An override level for bem-core to enable The Absolutely Independent Blocks paradigm",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tarmolov/bem-aib.git"
+  },
+  "keywords": [
+    "bem"
+  ],
+  "author": "Alexander Tarmolov <tarmolov@gmail.com>",
+  "license": "MIT"
+}
