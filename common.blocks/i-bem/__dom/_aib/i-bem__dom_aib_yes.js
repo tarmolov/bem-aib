@@ -1,4 +1,4 @@
-modules.define('i-bem__dom', function (provide, DOM) {
+(function () {
     /**
      * The Absolutely Independent Blocks paradigm forbids using some methods which i-bem contains
      */
@@ -21,5 +21,15 @@ modules.define('i-bem__dom', function (provide, DOM) {
             return result;
         }, {});
 
-    provide(DOM.decl('i-bem__dom', overrides))
-});
+    if (typeof modules === 'object') {
+        modules.define('i-bem__dom', function (provide, DOM) {
+            provide(DOM.decl('i-bem__dom', overrides))
+        });
+    }
+
+    // compatibility for old i-bem version
+    if (typeof BEM === 'object') {
+        BEM.DOM.decl('i-bem__dom', overrides);
+    }
+
+}());
